@@ -12,11 +12,7 @@ public class OffsetUtils {
         double offsetX = dx * cos - dy * sin;
         double offsetY = dx * sin + dy * cos;
 
-        return new Pose(
-                pose.getX() - offsetX,
-                pose.getY() - offsetY,
-                heading
-        );
+        return new Pose(pose.getX() - offsetX, pose.getY() - offsetY, heading);
     }
 
     public static boolean isTurning(double h1, double h2) {
